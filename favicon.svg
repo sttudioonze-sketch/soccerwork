@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bola" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDC830"/>
+      <stop offset="1" stop-color="#FF9920"/>
+    </linearGradient>
+    <clipPath id="esfera"><circle cx="30" cy="32" r="13.4"/></clipPath>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#000"/>
+  <!-- o "C" do logo: disco branco com recorte à direita -->
+  <path d="M38 32 48.66 20.34A22 22 0 1 0 48.66 43.66Z" fill="#fff"/>
+  <!-- gomos laranja da bola; o branco do disco faz as costuras -->
+  <path clip-path="url(#esfera)" fill="url(#bola)" d="M40.52 22.28 39.94 27.85 34.82 30.13 30.29 26.83 30.88 21.27 35.99 18.99ZM42.50 39.00 37.02 40.17 33.27 36.01 35.00 30.68 40.48 29.52 44.23 33.68ZM27.20 46.05 24.40 41.20 27.20 36.35 32.80 36.35 35.60 41.20 32.80 46.05ZM15.77 33.68 19.52 29.52 25.00 30.68 26.73 36.01 22.98 40.17 17.50 39.00ZM24.01 18.99 29.12 21.27 29.71 26.83 25.18 30.13 20.06 27.85 19.48 22.28Z"/>
+  <!-- linhas de velocidade -->
+  <g stroke="#fff" stroke-width="2" stroke-linecap="round">
+    <path d="M45 28h10M46 32h12M45 36h9"/>
+  </g>
+</svg>

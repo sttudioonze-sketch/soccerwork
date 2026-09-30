@@ -19,7 +19,7 @@ body { background: var(--branco); }
 #duvidas.atm-grade::before { display: none; }
 
 /* ---------- vidro claro ---------- */
-.vidro, .plano, .nc, .num-cartao, .barra-fixa {
+.vidro, .plano, .num-cartao, .barra-fixa, .fp-vis, .garantia {
   background: var(--vidro-bg);
   border: 1px solid var(--vidro-borda);
   -webkit-backdrop-filter: var(--vidro-desfoque); backdrop-filter: var(--vidro-desfoque);
@@ -28,7 +28,6 @@ body { background: var(--branco); }
 [data-luz]::before { background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 153, 32, .07), transparent 65%); }
 [data-luz]:hover { border-color: rgba(0, 0, 0, .14); }
 
-.nc { box-shadow: var(--vidro-sombra), inset 0 3px 0 var(--laranja); }
 .num-cartao { background: linear-gradient(145deg, rgba(255, 255, 255, .9), rgba(244, 244, 244, .75)); border-radius: 36px; }
 .num-cartao .aneis { display: none; }
 
@@ -38,23 +37,19 @@ body { background: var(--branco); }
   box-shadow: var(--vidro-sombra), 0 0 0 1px var(--laranja);
 }
 .cat svg, .dif-lista svg { background: rgba(0, 0, 0, .045); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .05); }
-.card-ferr .chip { background: rgba(0, 0, 0, .05); }
-.card-ferr .thumb { box-shadow: 0 0 0 1px var(--vidro-borda); }
+.vit-img { box-shadow: 0 0 0 1px var(--vidro-borda); }
 
 .dif-lista { display: grid; gap: 12px; }
 .dif-lista li.vidro, .dif-lista li.vidro:first-child {
-  padding: 22px 44px 22px 20px; border-radius: 22px;
+  padding: 22px 20px; border-radius: 22px;
   background: var(--vidro-bg); border: 1px solid var(--vidro-borda);
   -webkit-backdrop-filter: var(--vidro-desfoque); backdrop-filter: var(--vidro-desfoque);
   box-shadow: var(--vidro-sombra);
 }
-.dif-lista li::after { right: 22px; }
 
 .botao-contorno { background: rgba(255, 255, 255, .7); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
 .setas button, .cf-controles button { background: rgba(255, 255, 255, .7); border: 1px solid var(--vidro-borda); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
 .faq details[open] { border-color: var(--laranja); }
-.foto-vazia { background: repeating-linear-gradient(135deg, rgba(0, 0, 0, .03) 0 1px, transparent 1px 14px), rgba(0, 0, 0, .03); }
-.progresso { background: rgba(0, 0, 0, .06); }
 
 /* ---------- efeito 1: grade de células acendendo (números) ---------- */
 .grade-digital {
@@ -88,11 +83,13 @@ body { background: var(--branco); }
           mask-image: radial-gradient(ellipse 75% 70% at 30% 45%, #000 20%, transparent 78%);
 }
 .atm-linhas::after { /* linha de varredura */
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 140px; z-index: -1; pointer-events: none;
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .025) 85%, rgba(255, 153, 32, .55) 99%, transparent);
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 120px; z-index: -1; pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 153, 32, .7) 30%, rgba(253, 200, 48, .7) 60%, transparent) 0 100% / 100% 1px no-repeat,
+    linear-gradient(180deg, transparent, rgba(255, 153, 32, .05));
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 60%, transparent 95%);
           mask-image: linear-gradient(90deg, transparent, #000 15%, #000 60%, transparent 95%);
-  top: -140px;
+  top: -120px;
 }
 
 /* ---------- efeito 3: piso de grade em perspectiva (preço) ---------- */
@@ -107,10 +104,6 @@ body { background: var(--branco); }
   background-size: 64px 64px;
   -webkit-mask-image: linear-gradient(to top, #000 5%, transparent 85%);
           mask-image: linear-gradient(to top, #000 5%, transparent 85%);
-}
-#preco::before { /* horizonte do piso */
-  content: ""; position: absolute; left: 0; right: 0; bottom: 38%; height: 1px; z-index: -1;
-  background: linear-gradient(90deg, transparent, rgba(255, 153, 32, .45), transparent);
 }
 
 /* ---------- blocos escuros: vidro escuro ---------- */
@@ -136,5 +129,5 @@ body { background: var(--branco); }
   .grade-digital i { opacity: 1; }
 }
 @keyframes celula { 0%, 100% { opacity: 0; } 18%, 42% { opacity: 1; } 60% { opacity: 0; } }
-@keyframes varredura-v { from { top: -140px; } to { top: 100%; } }
+@keyframes varredura-v { from { top: -120px; } to { top: 100%; } }
 @keyframes fluxo { to { background-position: 0 64px, 0 0; } }
