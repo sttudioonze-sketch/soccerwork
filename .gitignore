@@ -1,0 +1,10 @@
+originais/
+.versoes/
+.DS_Store
+.lista-imagens.txt
+REF *.jpg
+EF *.jpg
+Paleta de Cores.jpg
+Artes Landing Page.png
+MAPA-SITE-ATUAL.md
+PROJETO.md

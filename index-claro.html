@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoccerWork | Gestão da preparação física no Excel</title>
+<meta name="description" content="46 planilhas de Excel interligadas para o preparador físico de futebol planejar a temporada, monitorar carga e recuperação e gerar relatórios em PDF.">
+<meta property="og:title" content="SoccerWork | Gestão da preparação física no Excel">
+<meta property="og:description" content="46 planilhas interligadas para planejar a temporada, monitorar carga e gerar relatórios em PDF.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Saira:wdth,wght@50..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/claro.css?v=202609302130">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho">
+  <a class="cab-logo" href="#inicio" aria-label="SoccerWork, início"><img src="img/logo-escuro.webp" alt="SoccerWork" width="600" height="118"></a>
+  <nav class="cab-nav" aria-label="Seções">
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#relatorios">Relatórios</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#preco">Preço</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+  <a class="botao botao-p cab-cta" href="#preco">Comprar <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+</header>
+
+<div class="barra-fixa" id="topo" data-limite="620">
+  <a href="#inicio" aria-label="SoccerWork, início"><img src="img/logo-escuro.webp" alt="SoccerWork" width="600" height="118"></a>
+  <nav aria-label="Seções, atalho">
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#relatorios">Relatórios</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#preco">Preço</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+  <a class="botao botao-p" href="#preco">Comprar <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+</div>
+
+<main id="conteudo">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero-claro" id="inicio">
+    <div class="hero-cartao" id="palco">
+      <div class="hc-texto">
+        <p class="selo"><span class="selo-ponto" aria-hidden="true"></span>Versão 5.0, com 46 planilhas</p>
+        <h1>A preparação física da equipe inteira, <span class="destaque">num só painel.</span></h1>
+        <p class="hc-sub">Planilhas de Excel interligadas para planejar a temporada, monitorar carga e recuperação e levar relatórios prontos para a comissão técnica.</p>
+        <div class="acoes">
+          <a class="botao" href="#preco">Comprar por R$ 397 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+          <button class="botao botao-s" type="button" data-video="demo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+            Ver o sistema por dentro
+          </button>
+        </div>
+        <a class="prova" href="#depoimentos">
+          <span class="prova-rostos" aria-hidden="true">
+            <img src="img/depoimentos/rosto-jose-lummertz.webp" alt="" width="160" height="160">
+            <img src="img/depoimentos/rosto-mauro-mazoni.webp" alt="" width="160" height="160">
+            <img src="img/depoimentos/rosto-antonio-junior.webp" alt="" width="160" height="160">
+            <img src="img/depoimentos/rosto-eduardo-oliveira.webp" alt="" width="160" height="160">
+          </span>
+          <span>Veja o depoimento de 6 preparadores que usam</span>
+        </a>
+      </div>
+
+      <div class="hc-foto">
+        <div class="aneis" aria-hidden="true"><span style="--d:300px;--i:0"></span><span style="--d:460px;--i:1"></span><span style="--d:620px;--i:2"></span><span style="--d:780px;--i:3"></span></div>
+        <img class="especialista" src="img/especialista.webp" alt="Guilherme Rondon, preparador físico e idealizador do SoccerWork" width="900" height="1270" fetchpriority="high">
+        <div class="flutuantes" aria-hidden="true">
+          <div class="flut c-esq" style="--l:-16%;--t:50%;--ry:18deg;--rx:4deg;--prof:1.2;--e:.9s;--dur:7s">
+            <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Intensidade</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Performance</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Controle</li></ul>
+          </div>
+          <div class="flut longe" style="--l:-4%;--t:14%;--ry:14deg;--rx:5deg;--prof:.4;--s:.8;--e:1.1s;--dur:9s">
+            <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Profissionalismo</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Desenvolvimento</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Mentalidade</li></ul>
+          </div>
+          <div class="flut" style="--r:-8%;--t:20%;--ry:-14deg;--rx:3deg;--prof:.7;--e:1s;--dur:8s">
+            <div class="vidro nome-tag"><strong>Guilherme Rondon</strong><span>Preparador físico</span></div>
+          </div>
+          <div class="flut c-dir" style="--r:-12%;--t:68%;--ry:-18deg;--rx:-4deg;--prof:1.25;--e:1.2s;--dur:6.8s">
+            <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>PSE Monotonia</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Minutagem</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Micro e meso</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAIXA DE ÁREAS ================= -->
+  <section class="faixa" aria-label="Áreas do sistema">
+    <div class="faixa-trilho"><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>PSE</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Monotonia e strain</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Macrociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Mesociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Microciclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Convocação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Minutagem de jogo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Controle de GPS</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Hidratação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Lesões</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>% de gordura</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Salto vertical</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Relatórios em PDF</li></ul><ul aria-hidden="true"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>PSE</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Monotonia e strain</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Macrociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Mesociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Microciclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Convocação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Minutagem de jogo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Controle de GPS</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Hidratação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Lesões</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>% de gordura</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Salto vertical</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Relatórios em PDF</li></ul></div>
+  </section>
+
+  <!-- ================= NÚMEROS ================= -->
+  <section class="numeros" aria-labelledby="t-numeros">
+    <div class="num-cartao">
+      <div class="aneis" aria-hidden="true"><span style="--d:260px;--i:0"></span><span style="--d:420px;--i:1"></span><span style="--d:580px;--i:2"></span><span style="--d:740px;--i:3"></span></div>
+      <div class="num-texto">
+        <h2 id="t-numeros">Um sistema completo, pronto para usar.</h2>
+        <p>Planejamento, carga, recuperação, avaliação física e relatórios, tudo interligado num arquivo de Excel que é seu.</p>
+        <a class="botao" href="#ferramentas">Ver as ferramentas <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+      </div>
+      <dl class="num-cards">
+        <div class="nc nc-a" style="--i:0"><dt><span data-contar="46">46</span></dt><dd>planilhas interligadas</dd></div>
+        <div class="nc nc-b" style="--i:1"><dt><span data-contar="16">16</span></dt><dd>modelos de relatório em PDF</dd></div>
+        <div class="nc nc-c" style="--i:2"><dt>1×</dt><dd>pagamento, sem mensalidade</dd></div>
+        <div class="nc nc-d" style="--i:3"><dt><span data-contar="7">7</span> dias</dt><dd>de garantia</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= VÍDEO ================= -->
+  <section class="bloco atm-luz-e" id="video">
+    <div class="miolo video">
+      <div class="video-texto">
+        <h2>Veja o SoccerWork funcionando.</h2>
+        <p>Um passeio pelo painel e pelas principais planilhas, com dados de verdade. É o jeito mais rápido de saber se o sistema serve para a sua rotina.</p>
+        <ul class="checks">
+          <li>Painel com acesso a todas as áreas</li>
+          <li>Lançamento de PSE e controle de carga</li>
+          <li>Planejamento do micro ao macrociclo</li>
+          <li>Relatórios em PDF para a comissão</li>
+        </ul>
+      </div>
+      <div class="video-moldura vidro">
+        <span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <button class="video-capa" type="button" data-video="demo" aria-label="Assistir ao vídeo de apresentação">
+          <img src="img/video-capa.webp" alt="" width="1280" height="720" loading="lazy">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+        </button>
+        <p class="video-legenda"><span class="rec" aria-hidden="true"></span>Apresentação do sistema</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FERRAMENTAS ================= -->
+  <section class="bloco atm-grade" id="ferramentas">
+    <div class="miolo">
+      <div class="cabeca cabeca-centro">
+        <h2>Um painel. Tudo o que o preparador controla.</h2>
+        <p>Do painel você chega a cada planilha com um clique. Os dados conversam entre si: a PSE lançada no treino alimenta carga, monotonia, strain e os relatórios.</p>
+      </div>
+
+      <div class="orbita">
+        <svg class="orbita-fios" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <g class="fios">
+            <path d="M17 14H20L25 28"/><path d="M17 38H20L25 42"/><path d="M17 62H20L25 56"/><path d="M17 86H20L25 70"/>
+            <path d="M83 14H80L75 28"/><path d="M83 38H80L75 42"/><path d="M83 62H80L75 56"/><path d="M83 86H80L75 70"/>
+          </g>
+          <g class="pulsos">
+            <path pathLength="100" d="M17 14H20L25 28" style="--d:0s"/><path pathLength="100" d="M83 38H80L75 42" style="--d:.8s"/><path pathLength="100" d="M17 62H20L25 56" style="--d:1.6s"/><path pathLength="100" d="M83 86H80L75 70" style="--d:2.4s"/>
+            <path pathLength="100" d="M83 14H80L75 28" style="--d:3.2s"/><path pathLength="100" d="M17 86H20L25 70" style="--d:4s"/><path pathLength="100" d="M83 62H80L75 56" style="--d:4.8s"/><path pathLength="100" d="M17 38H20L25 42" style="--d:5.6s"/>
+          </g>
+        </svg>
+        <ul class="orbita-tags" aria-label="Algumas áreas do sistema">
+          <li class="vidro e" style="--y:14%">PSE e carga interna</li>
+          <li class="vidro e" style="--y:38%">Monotonia e strain</li>
+          <li class="vidro e" style="--y:62%">Recuperação pós-jogo</li>
+          <li class="vidro e" style="--y:86%">Hidratação</li>
+          <li class="vidro d" style="--y:14%">Macrociclo</li>
+          <li class="vidro d" style="--y:38%">Minutagem de jogo</li>
+          <li class="vidro d" style="--y:62%">% de gordura</li>
+          <li class="vidro d" style="--y:86%">Network de clubes</li>
+        </ul>
+        <img class="orbita-painel" src="img/painel.webp" alt="Painel do SoccerWork aberto no Excel, num notebook" width="1400" height="990" loading="lazy">
+      </div>
+
+      <div class="categorias">
+        <div class="cat-texto">
+          <h3 class="titulo-medio">Uma planilha para cada parte do trabalho.</h3>
+          <p>Escolha uma área para ver as planilhas no carrossel abaixo. Toque em qualquer uma para ampliar.</p>
+        </div>
+        <div class="cat-grade" role="group" aria-label="Filtrar planilhas por área">
+          <button class="cat vidro" type="button" data-filtro="planejamento" data-luz aria-pressed="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <strong>Planejamento</strong><span>7 planilhas</span>
+          </button>
+          <button class="cat vidro" type="button" data-filtro="carga" data-luz aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>
+            <strong>Carga e recuperação</strong><span>7 planilhas</span>
+          </button>
+          <button class="cat vidro" type="button" data-filtro="avaliacao" data-luz aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="7"/><path d="M12 13l3-3M9 3h6"/></svg>
+            <strong>Avaliação física</strong><span>8 planilhas</span>
+          </button>
+          <button class="cat vidro" type="button" data-filtro="elenco" data-luz aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.3-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.7 3.1 2.4 3.5 5.2"/></svg>
+            <strong>Elenco e jogo</strong><span>3 planilhas</span>
+          </button>
+          <button class="cat vidro" type="button" data-filtro="carreira" data-luz aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9l8-5 8 5v10M9 19v-6h6v6"/></svg>
+            <strong>Carreira</strong><span>3 planilhas</span>
+          </button>
+          <button class="cat vidro" type="button" data-filtro="todas" data-luz aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            <strong>Todas as áreas</strong><span>46 planilhas no total</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="carrossel-topo">
+        <p class="carrossel-nome" id="nome-filtro" aria-live="polite">Planejamento</p>
+        <div class="setas">
+          <button type="button" data-rolar="ferr" data-dir="-1" aria-label="Planilhas anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" data-rolar="ferr" data-dir="1" aria-label="Próximas planilhas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <ul class="carrossel" id="ferr" aria-label="Planilhas">
+        <li data-cat="planejamento"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f11-planner-semanal.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Planner semanal</strong><span class="desc">Organização da semana de trabalho.</span><span class="chip">Planejamento</span></button></li>
+        <li data-cat="planejamento"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f12-microciclo.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Microciclo</strong><span class="desc">Atividades da semana, dia a dia.</span><span class="chip">Planejamento</span></button></li>
+        <li data-cat="planejamento"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f13-mesociclo.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Mesociclo</strong><span class="desc">Organização mensal das atividades.</span><span class="chip">Planejamento</span></button></li>
+        <li data-cat="planejamento"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f14-macrociclo.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Macrociclo</strong><span class="desc">Controle anual de sessões, jogos e folgas.</span><span class="chip">Planejamento</span></button></li>
+        <li data-cat="planejamento"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f24-sessao-treino.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Sessão de treino</strong><span class="desc">Montagem e controle de cada sessão.</span><span class="chip">Planejamento</span></button></li>
+        <li data-cat="planejamento"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f22-atividades-1.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Atividades específicas</strong><span class="desc">Controle por dimensão: física, técnica, tática ou outra.</span><span class="chip">Planejamento</span></button></li>
+        <li data-cat="planejamento"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f23-atividades-2.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Atividades: gráfico</strong><span class="desc">Visão geral das atividades controladas.</span><span class="chip">Planejamento</span></button></li>
+
+        <li data-cat="carga"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f07-pse-geral.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Controle geral de PSE</strong><span class="desc">Carga interna, monotonia e strain por semana.</span><span class="chip">Carga e recuperação</span></button></li>
+        <li data-cat="carga"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f08-pse-metricas.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Métricas de PSE</strong><span class="desc">Resumo de carga, volume e elenco.</span><span class="chip">Carga e recuperação</span></button></li>
+        <li data-cat="carga"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f04-recuperacao-pos-jogo.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Recuperação pós-jogo</strong><span class="desc">Sono, intensidade, estresse e dor muscular.</span><span class="chip">Carga e recuperação</span></button></li>
+        <li data-cat="carga"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f05-recuperacao-pos-treino-1.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Recuperação pós-treino</strong><span class="desc">Avaliação subjetiva após cada treino.</span><span class="chip">Carga e recuperação</span></button></li>
+        <li data-cat="carga"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f06-recuperacao-pos-treino-2.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Recuperação: gráficos</strong><span class="desc">A evolução do elenco ao longo das semanas.</span><span class="chip">Carga e recuperação</span></button></li>
+        <li data-cat="carga"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f09-lesoes.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Lesões e recuperação</strong><span class="desc">Local da lesão e acompanhamento do retorno.</span><span class="chip">Carga e recuperação</span></button></li>
+        <li data-cat="carga"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f10-hidratacao.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Hidratação</strong><span class="desc">Controle geral de hidratação.</span><span class="chip">Carga e recuperação</span></button></li>
+
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f16-massa-gordura.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Massa muscular e % de gordura</strong><span class="desc">Protocolo de 4 dobras.</span><span class="chip">Avaliação física</span></button></li>
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f17-comparativo-1.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Comparativo trimestral</strong><span class="desc">Massa, peso e % de gordura em 3 meses.</span><span class="chip">Avaliação física</span></button></li>
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f18-comparativo-2.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Comparativo: gráficos</strong><span class="desc">A mesma evolução, jogador por jogador.</span><span class="chip">Avaliação física</span></button></li>
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f19-peso-mensal.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Peso mensal</strong><span class="desc">Evolução do peso de cada jogador no mês.</span><span class="chip">Avaliação física</span></button></li>
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f20-peso-semanal.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Peso semanal</strong><span class="desc">Peso antes e depois do treino.</span><span class="chip">Avaliação física</span></button></li>
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f21-peso-diario.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Peso diário</strong><span class="desc">Antes e depois do treino, em dois turnos.</span><span class="chip">Avaliação física</span></button></li>
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f25-salto-vertical-1.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Salto vertical</strong><span class="desc">Aplicação e registro do teste.</span><span class="chip">Avaliação física</span></button></li>
+        <li data-cat="avaliacao"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f26-salto-vertical-2.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Salto vertical: gráficos</strong><span class="desc">Comparativo dos saltos do elenco.</span><span class="chip">Avaliação física</span></button></li>
+
+        <li data-cat="elenco"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f02-gestao-elenco.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Gestão de elenco</strong><span class="desc">Dados de cada jogador e campograma de posições.</span><span class="chip">Elenco e jogo</span></button></li>
+        <li data-cat="elenco"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f03-controle-posicoes.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Controle de posições</strong><span class="desc">Todas as posições do elenco num só quadro.</span><span class="chip">Elenco e jogo</span></button></li>
+        <li data-cat="elenco"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f15-minutagem-jogo.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Minutagem de jogo</strong><span class="desc">Minutos jogados, jogador por jogador.</span><span class="chip">Elenco e jogo</span></button></li>
+
+        <li data-cat="carreira"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f27-carreira.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Planejamento de carreira</strong><span class="desc">Metas e ações para a sua evolução profissional.</span><span class="chip">Carreira</span></button></li>
+        <li data-cat="carreira"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f28-network-profissionais.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Network de profissionais</strong><span class="desc">Cadastro dos contatos que você faz no futebol.</span><span class="chip">Carreira</span></button></li>
+        <li data-cat="carreira"><button type="button" class="card-ferr vidro" data-luz><span class="thumb"><img src="img/ferramentas/f29-network-clubes.webp" alt="" loading="lazy" width="1000" height="707"></span><strong>Network de clubes</strong><span class="desc">Cadastro de clubes e oportunidades.</span><span class="chip">Carreira</span></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= RELATÓRIOS ================= -->
+  <section class="bloco escuro" id="relatorios">
+    <div class="miolo">
+      <div class="cabeca cabeca-centro">
+        <h2>Relatórios em PDF para a comissão e a diretoria.</h2>
+        <p>Cada teste e cada controle vira um documento com o escudo do clube, pronto para imprimir ou mandar pelo celular.</p>
+      </div>
+    </div>
+    <div class="coverflow">
+      <ul class="cf-trilho" id="cf" aria-label="Modelos de relatório">
+        <li><button type="button"><img src="img/relatorios/r01-convocacao.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Convocação</strong><span>Jogo</span></li>
+        <li><button type="button"><img src="img/relatorios/r02-cartoes.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Controle de cartões</strong><span>Jogo</span></li>
+        <li><button type="button"><img src="img/relatorios/r03-cartoes-grafico.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Cartões: gráficos</strong><span>Jogo</span></li>
+        <li><button type="button"><img src="img/relatorios/r11-resultados.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Resultados</strong><span>Jogo</span></li>
+        <li><button type="button"><img src="img/relatorios/r09-gps.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Controle de GPS</strong><span>Carga</span></li>
+        <li><button type="button"><img src="img/relatorios/r13-pse-psr.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Coleta de PSE e PSR</strong><span>Carga</span></li>
+        <li><button type="button"><img src="img/relatorios/r12-ck.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Controle de CK</strong><span>Carga</span></li>
+        <li><button type="button"><img src="img/relatorios/r04-tcar.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>T-CAR</strong><span>Teste</span></li>
+        <li><button type="button"><img src="img/relatorios/r14-30-15-ift.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>30-15 IFT</strong><span>Teste</span></li>
+        <li><button type="button"><img src="img/relatorios/r10-rast.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>RAST</strong><span>Teste</span></li>
+        <li><button type="button"><img src="img/relatorios/r08-limiar-1000m.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>1000 m: limiar anaeróbio</strong><span>Teste</span></li>
+        <li><button type="button"><img src="img/relatorios/r07-impulsao.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Impulsão horizontal</strong><span>Teste</span></li>
+        <li><button type="button"><img src="img/relatorios/r05-soccertest-1.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Soccertest por posição</strong><span>Teste</span></li>
+        <li><button type="button"><img src="img/relatorios/r06-soccertest-2.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Soccertest em lista</strong><span>Teste</span></li>
+        <li><button type="button"><img src="img/relatorios/r15-musculacao-1.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Ficha de musculação</strong><span>Força</span></li>
+        <li><button type="button"><img src="img/relatorios/r16-musculacao-2.webp" alt="" loading="lazy" width="707" height="1000"></button><strong>Controle de 1 RM</strong><span>Força</span></li>
+      </ul>
+    </div>
+    <div class="cf-controles">
+      <button type="button" data-cf="-1" aria-label="Relatório anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <p class="cf-contador"><span id="cf-atual">1</span> de 16</p>
+      <button type="button" data-cf="1" aria-label="Próximo relatório"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section class="bloco atm-luz-d" id="depoimentos">
+    <div class="miolo">
+      <div class="cabeca cabeca-linha">
+        <div>
+          <h2>Quem usa, conta.</h2>
+          <p>Seis preparadores físicos gravaram como o SoccerWork entrou na rotina deles.</p>
+        </div>
+        <div class="setas">
+          <button type="button" data-rolar="depo" data-dir="-1" aria-label="Depoimentos anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" data-rolar="depo" data-dir="1" aria-label="Próximos depoimentos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <ul class="carrossel carrossel-depo" id="depo" aria-label="Depoimentos em vídeo">
+        <li class="depo vidro" data-luz><button type="button" data-video="antonio" aria-label="Assistir ao depoimento de Antonio Junior"><img src="img/depoimentos/antonio-junior.webp" alt="" loading="lazy" width="960" height="540"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></button><strong>Antonio Junior</strong><span>Preparador físico</span></li>
+        <li class="depo vidro" data-luz><button type="button" data-video="eduardo" aria-label="Assistir ao depoimento de Eduardo Oliveira"><img src="img/depoimentos/eduardo-oliveira.webp" alt="" loading="lazy" width="960" height="540"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></button><strong>Eduardo Oliveira</strong><span>Preparador físico</span></li>
+        <li class="depo vidro" data-luz><button type="button" data-video="jose" aria-label="Assistir ao depoimento de José Lummertz"><img src="img/depoimentos/jose-lummertz.webp" alt="" loading="lazy" width="960" height="540"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></button><strong>José Lummertz</strong><span>Preparador físico</span></li>
+        <li class="depo vidro" data-luz><button type="button" data-video="thiago" aria-label="Assistir ao depoimento de Thiago Ziemmer"><img src="img/depoimentos/thiago-ziemmer.webp" alt="" loading="lazy" width="960" height="540"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></button><strong>Thiago Ziemmer</strong><span>Preparador físico</span></li>
+        <li class="depo vidro" data-luz><button type="button" data-video="mauro" aria-label="Assistir ao depoimento de Mauro Mazoni"><img src="img/depoimentos/mauro-mazoni.webp" alt="" loading="lazy" width="960" height="540"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></button><strong>Mauro Mazoni</strong><span>Preparador físico</span></li>
+        <li class="depo vidro" data-luz><button type="button" data-video="johnatan" aria-label="Assistir ao depoimento de Johnatan Silva"><img src="img/depoimentos/johnatan-silva.webp" alt="" loading="lazy" width="960" height="540"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></button><strong>Johnatan Silva</strong><span>Preparador físico</span></li>
+      </ul>
+      <div class="progresso" aria-hidden="true"><span id="depo-prog"></span></div>
+    </div>
+  </section>
+
+  <!-- ================= DIFERENCIAIS ================= -->
+  <section class="bloco atm-grade">
+    <div class="miolo diferenciais">
+      <div class="dif-texto">
+        <h2>A ferramenta é sua, não do clube.</h2>
+        <p>Depender só da estrutura do clube limita o seu trabalho. Com o SoccerWork, o seu método, os seus dados e os seus relatórios vão com você para qualquer equipe.</p>
+        <a class="botao" href="#preco">Comprar por R$ 397 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+      </div>
+      <ul class="dif-lista">
+        <li class="vidro" data-luz>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+          <div><strong>Pagamento único</strong><p>Sem mensalidade. Você paga uma vez e usa por quanto tempo quiser.</p></div>
+        </li>
+        <li class="vidro" data-luz>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5"/></svg>
+          <div><strong>Atualizações incluídas</strong><p>Novas planilhas e melhorias chegam para quem já comprou. Até hoje, todas foram gratuitas.</p></div>
+        </li>
+        <li class="vidro" data-luz>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+          <div><strong>Funciona sem internet</strong><p>É um arquivo de Excel no seu computador. Abre no CT, no hotel ou no ônibus da delegação.</p></div>
+        </li>
+        <li class="vidro" data-luz>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4zM13 7l4 4"/></svg>
+          <div><strong>Do seu jeito</strong><p>Edite as planilhas, apague o que não usa e inclua as suas.</p></div>
+        </li>
+        <li class="vidro" data-luz>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19l1.3-3.9A8 8 0 1 1 8.9 18.7L4 19z"/></svg>
+          <div><strong>Suporte pelo WhatsApp</strong><p>Dúvida na instalação ou no uso? Você fala direto com quem desenvolveu.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PREÇO ================= -->
+  <section class="bloco" id="preco">
+    <div class="miolo">
+      <div class="cabeca cabeca-centro">
+        <h2>Um pagamento. Acesso para sempre.</h2>
+        <p>Depois da compra você recebe por e-mail o login para baixar o arquivo.</p>
+      </div>
+      <div class="planos">
+        <article class="plano">
+          <p class="plano-nome">No cartão</p>
+          <p class="plano-valor"><small>12x de</small>R$ 44,88</p>
+          <a class="botao botao-contorno" href="https://pay.kiwify.com.br/DZnyXJZ" rel="noopener">Parcelar no cartão <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+          <ul class="checks">
+            <li>Cartão de crédito em até 12x</li>
+            <li>Dá para dividir em dois cartões</li>
+            <li>Boleto também disponível</li>
+            <li>Acesso vitalício</li>
+          </ul>
+        </article>
+        <article class="plano plano-destaque">
+          <div class="plano-topo"><p class="plano-nome">No PIX</p><span class="plano-selo">Melhor preço</span></div>
+          <p class="plano-valor">R$ 397<small>à vista</small></p>
+          <a class="botao" href="pix.html">Pagar no PIX <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+          <ul class="checks">
+            <li>46 planilhas interligadas</li>
+            <li>16 modelos de relatório em PDF</li>
+            <li>Atualizações futuras</li>
+            <li>Suporte pelo WhatsApp</li>
+            <li>Windows e Mac, com Excel</li>
+          </ul>
+        </article>
+        <article class="plano">
+          <p class="plano-nome">Garantia</p>
+          <p class="plano-valor">7 dias</p>
+          <a class="botao botao-contorno" href="https://wa.me/555191736138" rel="noopener">Tirar dúvidas <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+          <ul class="checks">
+            <li>Reembolso em até 7 dias, como prevê o art. 49 do CDC</li>
+            <li>Suporte antes e depois da compra</li>
+            <li>Você fala direto com quem desenvolveu</li>
+          </ul>
+        </article>
+      </div>
+      <p class="oferta-nota">Cartão e boleto pela Kiwify. PIX direto para a Sttudio11.</p>
+    </div>
+  </section>
+
+  <!-- ================= QUEM CRIOU ================= -->
+  <section class="bloco atm-luz-e">
+    <div class="miolo">
+      <div class="cabeca">
+        <h2>Criado dentro do futebol.</h2>
+        <p>O SoccerWork nasceu da rotina de um preparador físico e foi construído por um ex-treinador que hoje desenvolve sistemas.</p>
+      </div>
+      <div class="quem-grade">
+        <article class="pessoa vidro" data-luz>
+          <div class="foto-vazia pessoa-foto" role="img" aria-label="Espaço reservado para a foto de Guilherme Rondon">
+            <span class="foto-vazia-rotulo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+              Foto do Guilherme
+              <small>Retrato vertical, 4:5</small>
+            </span>
+          </div>
+          <div>
+            <h3>Guilherme Rondon</h3>
+            <p class="pessoa-cargo">Idealizador do SoccerWork</p>
+            <p>Preparador físico profissional, hoje no Shenzhen City, da primeira divisão chinesa. Desenhou o SoccerWork a partir dos controles que usa no dia a dia.</p>
+          </div>
+        </article>
+        <article class="pessoa vidro" data-luz>
+          <div class="foto-vazia pessoa-foto" role="img" aria-label="Espaço reservado para a foto de Luis Esteves">
+            <span class="foto-vazia-rotulo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+              Foto do Luis
+              <small>Retrato vertical, 4:5</small>
+            </span>
+          </div>
+          <div>
+            <h3>Luis Esteves</h3>
+            <p class="pessoa-cargo">Desenvolvedor do SoccerWork</p>
+            <p>Ex-treinador de futebol e analista de desempenho, CEO da Sttudio11. Desenvolveu o sistema e atende o suporte.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DÚVIDAS ================= -->
+  <section class="bloco atm-grade" id="duvidas">
+    <div class="miolo duvidas">
+      <div class="cabeca">
+        <h2>Dúvidas frequentes</h2>
+        <p>Não achou a sua? <a href="https://wa.me/555191736138" rel="noopener">Pergunte no WhatsApp</a>.</p>
+      </div>
+      <div class="faq">
+        <details class="vidro">
+          <summary>O que é o SoccerWork?</summary>
+          <p>Um sistema de 46 planilhas de Excel interligadas para gerenciar a preparação física de uma equipe de futebol. Funciona no Windows e no Mac, desde que o Excel esteja instalado. Recomendamos a versão mais recente do Excel.</p>
+        </details>
+        <details class="vidro">
+          <summary>É um aplicativo?</summary>
+          <p>Não. É um arquivo de Excel que fica no seu computador. Por isso funciona sem internet e você pode editar tudo.</p>
+        </details>
+        <details class="vidro">
+          <summary>Como recebo depois de comprar?</summary>
+          <p>Você recebe um e-mail da plataforma de pagamento com o login para baixar o arquivo. Se não chegar, chame no WhatsApp <a href="https://wa.me/555191736138" rel="noopener">(51) 99173-6138</a> ou escreva para <a href="mailto:soccerwork@sttudio11.com.br">soccerwork@sttudio11.com.br</a>.</p>
+        </details>
+        <details class="vidro">
+          <summary>Tem garantia?</summary>
+          <p>Sim, 7 dias. Se não servir para você, devolvemos o valor. Antes de pedir o reembolso, fale com o suporte: a maioria das dúvidas se resolve rápido.</p>
+        </details>
+        <details class="vidro">
+          <summary>Quais as formas de pagamento?</summary>
+          <p>PIX (R$ 397), cartão de crédito em até 12x de R$ 44,88 ou boleto. No cartão, dá para dividir o valor em dois cartões.</p>
+        </details>
+        <details class="vidro">
+          <summary>Quantas planilhas são?</summary>
+          <p>46 na versão 5.0. O número cresce a cada atualização.</p>
+        </details>
+        <details class="vidro">
+          <summary>Posso usar no celular?</summary>
+          <p>Abre, mas não recomendamos: o Excel não se adapta à tela pequena e os botões do painel ficam difíceis de tocar. Tablets têm o mesmo problema. Use no computador e mande os PDFs pelo celular.</p>
+        </details>
+        <details class="vidro">
+          <summary>Posso mudar as planilhas?</summary>
+          <p>Sim. Dá para editar, excluir e incluir planilhas suas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape-claro">
+  <div class="rodape-cartao">
+    <div class="rodape-topo">
+      <img src="img/logo.webp" alt="SoccerWork" width="600" height="118" loading="lazy">
+      <a class="botao" href="#preco">Comprar por R$ 397 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="rodape-cols">
+      <div>
+        <h3>Contato</h3>
+        <a href="https://wa.me/555191736138" rel="noopener">WhatsApp (51) 99173-6138</a>
+        <a href="mailto:soccerwork@sttudio11.com.br">soccerwork@sttudio11.com.br</a>
+        <a href="https://www.instagram.com/soccer_workbr" rel="noopener">Instagram @soccer_workbr</a>
+      </div>
+      <div>
+        <h3>Empresa</h3>
+        <p>Sttudio11 Web Design<br>CNPJ 50.460.851/0001-95<br>Rua Saara, 51, Porto Alegre, RS</p>
+      </div>
+      <div>
+        <h3>Marca</h3>
+        <p>SoccerWork é marca registrada no INPI. O conteúdo do site e do sistema é protegido pela Lei 9.610/1998.</p>
+      </div>
+    </div>
+    <p class="rodape-base">© <span data-ano>2026</span> SoccerWork. Um produto Sttudio11.</p>
+  
+    <p class="rodape-marca" aria-hidden="true">SOCCERWORK</p>
+  </div>
+</footer>
+
+<!-- visualizador de imagens -->
+<dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+  <button class="fechar" type="button" data-fechar aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <figure>
+    <img alt="">
+    <figcaption><strong></strong><span></span></figcaption>
+  </figure>
+  <button class="lb-seta lb-ant" type="button" data-lb="-1" aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-seta lb-prox" type="button" data-lb="1" aria-label="Próxima"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</dialog>
+
+<!-- player de vídeo -->
+<dialog class="player" id="player" aria-label="Vídeo">
+  <button class="fechar" type="button" data-fechar aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <video controls playsinline preload="none"></video>
+</dialog>
+
+<script src="js/site.js?v=202609302030" defer></script>
+</body>
+</html>

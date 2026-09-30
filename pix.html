@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagamento PIX | SoccerWork</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Saira:wdth,wght@50..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=202609301930">
+</head>
+<body class="pg-pix">
+
+<header class="topo rolou" id="topo">
+  <a class="topo-logo" href="index.html" aria-label="SoccerWork, voltar ao início">
+    <img src="img/logo.webp" alt="SoccerWork" width="600" height="118">
+  </a>
+  <a class="botao botao-s botao-p" href="index.html#preco">Voltar</a>
+</header>
+
+<main class="pix">
+  <h1>Pagamento no PIX</h1>
+  <p class="pix-sub">SoccerWork 5.0, acesso vitalício. Valor: <strong>R$ 397,00</strong>.</p>
+
+  <div class="pix-card">
+    <img class="pix-qr" src="img/pix-qr.png" alt="QR Code do PIX de R$ 397,00 para a Sttudio11" width="425" height="425">
+
+    <div class="pix-dados">
+      <label for="pix-codigo">PIX copia e cola</label>
+      <div class="pix-copia">
+        <input id="pix-codigo" readonly value="00020101021126540014br.gov.bcb.pix0114504608510001950214SoccerWork 5.05204000053039865406397.005802BR5920L A DE SOUZA ESTEVES6009SAO PAULO62070503***63041E5B">
+        <button class="botao" type="button" id="copiar">Copiar código</button>
+      </div>
+      <p class="pix-aviso" id="aviso" role="status"></p>
+
+      <dl class="pix-info">
+        <div><dt>Chave PIX (CNPJ)</dt><dd>50.460.851/0001-95</dd></div>
+        <div><dt>Recebedor</dt><dd>L. A. de Souza Esteves (Sttudio11 Web Design)</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <ol class="pix-passos">
+    <li>Abra o app do seu banco e escolha pagar com PIX.</li>
+    <li>Leia o QR Code ou cole o código copiado.</li>
+    <li>Envie o comprovante pelo <a href="https://wa.me/555191736138?text=Ol%C3%A1!%20Paguei%20o%20SoccerWork%20no%20PIX%20e%20vou%20enviar%20o%20comprovante." rel="noopener">WhatsApp</a>, com seu nome e e-mail, para receber o acesso.</li>
+  </ol>
+</main>
+
+<script>
+  const botao = document.getElementById('copiar');
+  const campo = document.getElementById('pix-codigo');
+  const aviso = document.getElementById('aviso');
+  botao.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(campo.value);
+    } catch {
+      campo.select();
+      document.execCommand('copy');
+    }
+    botao.textContent = 'Código copiado';
+    aviso.textContent = 'Código copiado. Cole no app do seu banco.';
+    setTimeout(() => { botao.textContent = 'Copiar código'; }, 2500);
+  });
+</script>
+</body>
+</html>
