@@ -751,6 +751,9 @@ dialog[open] { display: grid; place-items: center; }
   .cat-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cat { padding: 12px; column-gap: 10px; }
   .cat svg { width: 34px; height: 34px; padding: 7px; }
+  .cat { grid-template-columns: minmax(0, 1fr); }
+  .cat svg { grid-row: auto; margin-bottom: 8px; }
+  .cat strong { overflow-wrap: anywhere; }
   .carrossel { grid-auto-columns: 78%; }
   .cf-trilho { padding-inline: calc(50% - 100px); }
   .cf-trilho li { flex-basis: 200px; }

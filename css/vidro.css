@@ -1,0 +1,140 @@
+/* SoccerWork — tema glassmorphism sobre a versão clara (carrega depois de claro.css)
+   Fundos claros neutros (branco e cinza leve), vidro fosco branco nos cartões e efeitos
+   digitais só em três pontos: grade de células (números), grade técnica com varredura
+   (diferenciais) e piso de grade em perspectiva (preço). O laranja fica nos detalhes. */
+
+:root {
+  --vidro-bg: linear-gradient(145deg, rgba(255, 255, 255, .78), rgba(255, 255, 255, .5));
+  --vidro-borda: rgba(0, 0, 0, .07);
+  --vidro-desfoque: blur(18px) saturate(160%);
+  --vidro-sombra: inset 0 1px 0 rgba(255, 255, 255, .95), 0 1px 2px rgba(0, 0, 0, .04), 0 16px 36px -18px rgba(0, 0, 0, .18);
+  --traco: rgba(0, 0, 0, .07);
+}
+
+body { background: var(--branco); }
+
+/* fundos claros neutros */
+.atm-luz-e::before, .atm-luz-d::before { background: none; }
+#depoimentos, #duvidas { background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .025) 30%, rgba(0, 0, 0, .025) 70%, rgba(0, 0, 0, 0)); }
+#duvidas.atm-grade::before { display: none; }
+
+/* ---------- vidro claro ---------- */
+.vidro, .plano, .nc, .num-cartao, .barra-fixa {
+  background: var(--vidro-bg);
+  border: 1px solid var(--vidro-borda);
+  -webkit-backdrop-filter: var(--vidro-desfoque); backdrop-filter: var(--vidro-desfoque);
+  box-shadow: var(--vidro-sombra);
+}
+[data-luz]::before { background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 153, 32, .07), transparent 65%); }
+[data-luz]:hover { border-color: rgba(0, 0, 0, .14); }
+
+.nc { box-shadow: var(--vidro-sombra), inset 0 3px 0 var(--laranja); }
+.num-cartao { background: linear-gradient(145deg, rgba(255, 255, 255, .9), rgba(244, 244, 244, .75)); border-radius: 36px; }
+.num-cartao .aneis { display: none; }
+
+.cat[aria-pressed="true"] {
+  background: #fff;
+  border-color: var(--laranja);
+  box-shadow: var(--vidro-sombra), 0 0 0 1px var(--laranja);
+}
+.cat svg, .dif-lista svg { background: rgba(0, 0, 0, .045); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .05); }
+.card-ferr .chip { background: rgba(0, 0, 0, .05); }
+.card-ferr .thumb { box-shadow: 0 0 0 1px var(--vidro-borda); }
+
+.dif-lista { display: grid; gap: 12px; }
+.dif-lista li.vidro, .dif-lista li.vidro:first-child {
+  padding: 22px 44px 22px 20px; border-radius: 22px;
+  background: var(--vidro-bg); border: 1px solid var(--vidro-borda);
+  -webkit-backdrop-filter: var(--vidro-desfoque); backdrop-filter: var(--vidro-desfoque);
+  box-shadow: var(--vidro-sombra);
+}
+.dif-lista li::after { right: 22px; }
+
+.botao-contorno { background: rgba(255, 255, 255, .7); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.setas button, .cf-controles button { background: rgba(255, 255, 255, .7); border: 1px solid var(--vidro-borda); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.faq details[open] { border-color: var(--laranja); }
+.foto-vazia { background: repeating-linear-gradient(135deg, rgba(0, 0, 0, .03) 0 1px, transparent 1px 14px), rgba(0, 0, 0, .03); }
+.progresso { background: rgba(0, 0, 0, .06); }
+
+/* ---------- efeito 1: grade de células acendendo (números) ---------- */
+.grade-digital {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(var(--traco) 1px, transparent 1px),
+    linear-gradient(90deg, var(--traco) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 90% at 72% 50%, #000 25%, transparent 80%);
+          mask-image: radial-gradient(ellipse 70% 90% at 72% 50%, #000 25%, transparent 80%);
+}
+.grade-digital i {
+  position: absolute; left: calc(var(--c) * 44px + 1px); top: calc(var(--r) * 44px + 1px);
+  width: 43px; height: 43px;
+  background: rgba(0, 0, 0, .05);
+  opacity: 0;
+}
+.grade-digital i.q { background: rgba(255, 153, 32, .28); }
+
+/* ---------- efeito 2: grade técnica com varredura (diferenciais) ---------- */
+.atm-linhas { overflow: hidden; }
+.atm-linhas::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(var(--traco) 1px, transparent 1px),
+    linear-gradient(90deg, var(--traco) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, .03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, .03) 1px, transparent 1px);
+  background-size: 112px 112px, 112px 112px, 28px 28px, 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 30% 45%, #000 20%, transparent 78%);
+          mask-image: radial-gradient(ellipse 75% 70% at 30% 45%, #000 20%, transparent 78%);
+}
+.atm-linhas::after { /* linha de varredura */
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 140px; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .025) 85%, rgba(255, 153, 32, .55) 99%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 60%, transparent 95%);
+          mask-image: linear-gradient(90deg, transparent, #000 15%, #000 60%, transparent 95%);
+  top: -140px;
+}
+
+/* ---------- efeito 3: piso de grade em perspectiva (preço) ---------- */
+#preco { overflow: hidden; }
+.piso-digital {
+  position: absolute; left: 50%; bottom: -2px; z-index: -1; pointer-events: none;
+  width: 220%; height: 62%; translate: -50% 0;
+  transform: perspective(520px) rotateX(64deg); transform-origin: 50% 100%;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, .1) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: linear-gradient(to top, #000 5%, transparent 85%);
+          mask-image: linear-gradient(to top, #000 5%, transparent 85%);
+}
+#preco::before { /* horizonte do piso */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 38%; height: 1px; z-index: -1;
+  background: linear-gradient(90deg, transparent, rgba(255, 153, 32, .45), transparent);
+}
+
+/* ---------- blocos escuros: vidro escuro ---------- */
+.hero-cartao { box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .35); } /* opaco, para casar com a aba do menu */
+.bloco.escuro, .rodape-cartao, .plano-destaque {
+  -webkit-backdrop-filter: blur(24px) saturate(140%); backdrop-filter: blur(24px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 30px 80px -30px rgba(0, 0, 0, .4);
+  border: 1px solid rgba(255, 255, 255, .12);
+}
+.rodape-cartao { background: radial-gradient(ellipse 60% 70% at 50% 120%, rgba(255, 153, 32, .4), transparent 70%), rgba(0, 0, 0, .92); }
+.plano-destaque { background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(253, 200, 48, .3), transparent 70%),
+    radial-gradient(ellipse 70% 40% at 50% 110%, rgba(255, 153, 32, .32), transparent 70%),
+    rgba(0, 0, 0, .9); }
+
+/* ---------- movimento ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .grade-digital i { animation: celula 6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+  .atm-linhas::after { animation: varredura-v 9s linear infinite; }
+  .piso-digital { animation: fluxo 5s linear infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .grade-digital i { opacity: 1; }
+}
+@keyframes celula { 0%, 100% { opacity: 0; } 18%, 42% { opacity: 1; } 60% { opacity: 0; } }
+@keyframes varredura-v { from { top: -140px; } to { top: 100%; } }
+@keyframes fluxo { to { background-position: 0 64px, 0 0; } }

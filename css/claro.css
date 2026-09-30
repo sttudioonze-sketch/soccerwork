@@ -532,6 +532,44 @@ button:hover > .play { scale: 1.07; }
   translate: 0 14%; user-select: none;
 }
 
+/* ---------- página do PIX ---------- */
+.pg-pix { min-height: 100vh; }
+.pg-pix::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image: linear-gradient(rgba(0, 0, 0, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, .06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 30%, #000 20%, transparent 80%);
+          mask-image: radial-gradient(ellipse 60% 55% at 50% 30%, #000 20%, transparent 80%);
+}
+.pix-topo { max-width: 880px; margin: 18px auto 0; padding: 0 var(--gutter); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.pix-topo img { width: 150px; }
+.pix-topo .botao { padding: 0 20px; }
+.pix { max-width: 880px; margin: 0 auto; padding: 56px var(--gutter) 96px; }
+.pix-sub { margin-top: 14px; color: var(--cinza); font-size: 1.125rem; }
+.pix-sub strong { color: var(--preto); }
+.pix-card { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; margin-top: 36px; padding: clamp(24px, 4vw, 40px); border-radius: 28px; }
+.pix-qr { width: 100%; padding: 14px; border-radius: 16px; background: #fff; box-shadow: 0 0 0 1px var(--linha); image-rendering: pixelated; }
+.pix-dados label { display: block; font-weight: 600; margin-bottom: 10px; color: var(--preto); }
+.pix-copia { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+.pix-copia input {
+  min-width: 0; min-height: 48px; padding: 0 16px; border-radius: 999px;
+  border: 1px solid var(--linha); background: rgba(0, 0, 0, .03);
+  color: var(--grafite); font: inherit; font-family: var(--mono); font-size: .8125rem;
+}
+.pix-copia .botao { padding: 0 22px; }
+.pix-aviso { min-height: 1.6em; margin-top: 8px; color: var(--grafite); font-size: .9375rem; font-weight: 600; }
+.pix-info { margin: 18px 0 0; display: grid; gap: 14px; }
+.pix-info dt { font-size: .875rem; color: var(--cinza); }
+.pix-info dd { margin: 2px 0 0; font-weight: 600; color: var(--preto); }
+.pix-passos { margin: 40px 0 0; padding-left: 1.3em; display: grid; gap: 12px; color: var(--grafite); }
+.pix-passos li::marker { color: var(--laranja); font-weight: 700; }
+.pix-passos a { color: var(--preto); text-decoration-color: var(--laranja); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+@media (max-width: 700px) {
+  .pix-card { grid-template-columns: minmax(0, 1fr); }
+  .pix-qr { max-width: 240px; }
+  .pix-copia { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* ---------- diálogos ---------- */
 dialog { padding: 0; border: 0; background: transparent; color: var(--branco); max-width: none; max-height: none; width: 100%; height: 100%; }
 dialog::backdrop { background: rgba(0, 0, 0, .9); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
@@ -584,9 +622,12 @@ dialog[open] { display: grid; place-items: center; }
   .rotulo { font-size: .875rem; }
 }
 @media (max-width: 900px) {
-  .hero-cartao { grid-template-columns: minmax(0, 1fr); padding-bottom: 0; }
-  .hc-texto { padding-bottom: 8px; }
-  .hc-foto { width: min(88%, 420px); }
+  /* no celular: especialista em cima, textos embaixo */
+  .hero-cartao { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 28px; padding-bottom: 40px; }
+  .hc-foto { order: -1; align-self: start; width: min(84%, 400px); }
+  .hc-texto { margin-top: -56px; padding-bottom: 0; }
+  .hc-texto .selo { background: rgba(0, 0, 0, .55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+  .aneis { top: 46%; }
   .flut.longe { display: none; }
   .video, .diferenciais, .duvidas { grid-template-columns: 1fr; }
   .dif-texto { position: static; }
@@ -608,8 +649,8 @@ dialog[open] { display: grid; place-items: center; }
   .acoes .botao { width: 100%; }
   .prova { flex-direction: column; align-items: flex-start; gap: 10px; }
   .flut { --s: .72; }
-  .flut.c-esq { --l: -10% !important; }
-  .flut.c-dir { --r: -10% !important; }
+  .flut.c-esq { --l: -10% !important; --t: 42% !important; }
+  .flut.c-dir { --r: -10% !important; --t: 58% !important; }
   .num-cards { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; gap: 10px; }
   .num-cards .nc { grid-column: auto; grid-row: auto; }
   .nc { padding: 12px; }
@@ -620,6 +661,9 @@ dialog[open] { display: grid; place-items: center; }
   .cat-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cat { padding: 12px; column-gap: 10px; }
   .cat svg { width: 36px; height: 36px; padding: 8px; }
+  .cat { grid-template-columns: minmax(0, 1fr); }
+  .cat svg { grid-row: auto; margin-bottom: 8px; }
+  .cat strong { overflow-wrap: anywhere; }
   .carrossel { grid-auto-columns: 78%; }
   .cf-trilho { padding-inline: calc(50% - 100px); }
   .cf-trilho li { flex-basis: 200px; }

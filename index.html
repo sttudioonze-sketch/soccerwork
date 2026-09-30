@@ -14,65 +14,48 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Saira:wdth,wght@50..125,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=202609301930">
+<link rel="stylesheet" href="css/claro.css?v=202610010110">
+<link rel="stylesheet" href="css/vidro.css?v=202609302330">
 </head>
 <body>
 
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="topo" id="topo">
-  <a class="topo-logo" href="#inicio" aria-label="SoccerWork, início">
-    <img src="img/logo.webp" alt="SoccerWork" width="600" height="118">
-  </a>
-  <nav class="topo-nav" aria-label="Seções">
+<header class="cabecalho">
+  <a class="cab-logo" href="#inicio" aria-label="SoccerWork, início"><img src="img/logo-escuro.webp" alt="SoccerWork" width="600" height="118"></a>
+  <nav class="cab-nav" aria-label="Seções">
     <a href="#ferramentas">Ferramentas</a>
     <a href="#relatorios">Relatórios</a>
     <a href="#depoimentos">Depoimentos</a>
     <a href="#preco">Preço</a>
     <a href="#duvidas">Dúvidas</a>
   </nav>
-  <a class="botao botao-p" href="#preco">Comprar</a>
+  <a class="botao botao-p cab-cta" href="#preco">Comprar <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
 </header>
+
+<div class="barra-fixa" id="topo" data-limite="620">
+  <a href="#inicio" aria-label="SoccerWork, início"><img src="img/logo-escuro.webp" alt="SoccerWork" width="600" height="118"></a>
+  <nav aria-label="Seções, atalho">
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#relatorios">Relatórios</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#preco">Preço</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+  <a class="botao botao-p" href="#preco">Comprar <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+</div>
 
 <main id="conteudo">
 
   <!-- ================= HERO ================= -->
-  <section class="hero" id="inicio">
-    <div class="hero-luz" aria-hidden="true"><span class="luz-cone"></span><span class="luz-sol"></span></div>
-
-    <div class="palco" id="palco">
-      <p class="marca-gigante" aria-hidden="true" data-texto="SOCCERWORK"><span class="m-soccer"><span style="--i:0">S</span><span style="--i:1">O</span><span style="--i:2">C</span><span style="--i:3">C</span><span style="--i:4">E</span><span style="--i:5">R</span></span><span class="m-work"><span style="--i:6">W</span><span style="--i:7">O</span><span style="--i:8">R</span><span style="--i:9">K</span></span></p>
-
-      <img class="especialista" src="img/especialista.webp" alt="Guilherme Rondon, preparador físico e idealizador do SoccerWork" width="900" height="1270" fetchpriority="high">
-
-      <div class="flutuantes" aria-hidden="true">
-        <div class="flut longe mais-longe" style="--l:27%;--t:7%;--ry:18deg;--rx:6deg;--prof:.3;--s:.8;--e:1.5s;--dur:9s">
-          <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Profissionalismo</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Desenvolvimento</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Mentalidade</li></ul>
-        </div>
-        <div class="flut frente c-esq" style="--l:21%;--t:50%;--ry:20deg;--rx:4deg;--prof:1.2;--e:1.2s;--dur:7s">
-          <ul class="vidro rotulo grande"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Intensidade</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Performance</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Controle</li></ul>
-        </div>
-        <div class="flut meio" style="--r:19%;--t:17%;--ry:-14deg;--rx:3deg;--prof:.7;--e:1.35s;--dur:8s">
-          <div class="vidro nome-tag"><strong>Guilherme Rondon</strong><span>Preparador físico</span></div>
-        </div>
-        <div class="flut longe" style="--r:25%;--t:40%;--ry:-22deg;--rx:3deg;--prof:.45;--s:.88;--e:1.45s;--dur:8.6s">
-          <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>% de gordura</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Resistência</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Velocidade</li></ul>
-        </div>
-        <div class="flut frente c-dir" style="--r:17%;--t:68%;--ry:-18deg;--rx:-4deg;--prof:1.25;--e:1.6s;--dur:6.8s">
-          <ul class="vidro rotulo grande"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>PSE Monotonia</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Minutagem</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Micro e meso</li></ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-base">
-      <div class="hero-titulo">
+  <section class="hero-claro" id="inicio">
+    <div class="hero-cartao" id="palco">
+      <div class="hc-texto">
         <p class="selo"><span class="selo-ponto" aria-hidden="true"></span>Versão 5.0, com 46 planilhas</p>
-        <h1>A preparação física da equipe inteira, num só painel.</h1>
-      </div>
-      <div class="hero-lado">
-        <p>Planilhas de Excel interligadas para planejar a temporada, monitorar carga e recuperação e levar relatórios prontos para a comissão técnica.</p>
+        <h1>A preparação física da equipe inteira, <span class="destaque">num só painel.</span></h1>
+        <p class="hc-sub">Planilhas de Excel interligadas para planejar a temporada, monitorar carga e recuperação e levar relatórios prontos para a comissão técnica.</p>
         <div class="acoes">
-          <a class="botao" href="#preco">Comprar por R$ 397</a>
+          <a class="botao" href="#preco">Comprar por R$ 397 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
           <button class="botao botao-s" type="button" data-video="demo">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
             Ver o sistema por dentro
@@ -88,17 +71,50 @@
           <span>Veja o depoimento de 6 preparadores que usam</span>
         </a>
       </div>
+
+      <div class="hc-foto">
+        <div class="aneis" aria-hidden="true"><span style="--d:300px;--i:0"></span><span style="--d:460px;--i:1"></span><span style="--d:620px;--i:2"></span><span style="--d:780px;--i:3"></span></div>
+        <img class="especialista" src="img/especialista.webp" alt="Guilherme Rondon, preparador físico e idealizador do SoccerWork" width="900" height="1270" fetchpriority="high">
+        <div class="flutuantes" aria-hidden="true">
+          <div class="flut c-esq" style="--l:-16%;--t:50%;--ry:18deg;--rx:4deg;--prof:1.2;--e:.9s;--dur:7s">
+            <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Intensidade</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Performance</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Controle</li></ul>
+          </div>
+          <div class="flut longe" style="--l:-4%;--t:14%;--ry:14deg;--rx:5deg;--prof:.4;--s:.8;--e:1.1s;--dur:9s">
+            <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Profissionalismo</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Desenvolvimento</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Mentalidade</li></ul>
+          </div>
+          <div class="flut" style="--r:-8%;--t:20%;--ry:-14deg;--rx:3deg;--prof:.7;--e:1s;--dur:8s">
+            <div class="vidro nome-tag"><strong>Guilherme Rondon</strong><span>Preparador físico</span></div>
+          </div>
+          <div class="flut c-dir" style="--r:-12%;--t:68%;--ry:-18deg;--rx:-4deg;--prof:1.25;--e:1.2s;--dur:6.8s">
+            <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>PSE Monotonia</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Minutagem</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Micro e meso</li></ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ================= FATOS ================= -->
-  <section class="fatos" aria-label="Resumo">
-    <dl class="vidro">
-      <div><dt><span data-contar="46">46</span></dt><dd>planilhas interligadas</dd></div>
-      <div><dt><span data-contar="16">16</span></dt><dd>modelos de relatório em PDF</dd></div>
-      <div><dt>1×</dt><dd>pagamento, sem mensalidade</dd></div>
-      <div><dt><span data-contar="7">7</span> dias</dt><dd>de garantia</dd></div>
-    </dl>
+  <!-- ================= FAIXA DE ÁREAS ================= -->
+  <section class="faixa" aria-label="Áreas do sistema">
+    <div class="faixa-trilho"><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>PSE</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Monotonia e strain</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Macrociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Mesociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Microciclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Convocação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Minutagem de jogo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Controle de GPS</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Hidratação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Lesões</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>% de gordura</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Salto vertical</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Relatórios em PDF</li></ul><ul aria-hidden="true"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>PSE</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Monotonia e strain</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Macrociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Mesociclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Microciclo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Convocação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Minutagem de jogo</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Controle de GPS</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Hidratação</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Lesões</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>% de gordura</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Salto vertical</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/></svg>Relatórios em PDF</li></ul></div>
+  </section>
+
+  <!-- ================= NÚMEROS ================= -->
+  <section class="numeros" aria-labelledby="t-numeros">
+    <div class="num-cartao">
+      <div class="grade-digital" aria-hidden="true"><i class="q" style="--c:15;--r:1;--d:0s"></i><i style="--c:18;--r:3;--d:0.8s"></i><i class="q" style="--c:21;--r:2;--d:1.6s"></i><i style="--c:24;--r:5;--d:2.4s"></i><i style="--c:27;--r:1;--d:3.2s"></i><i class="q" style="--c:19;--r:6;--d:4s"></i><i style="--c:23;--r:8;--d:4.8s"></i><i class="q" style="--c:26;--r:4;--d:0.4s"></i><i style="--c:29;--r:7;--d:1.2s"></i><i style="--c:16;--r:5;--d:2s"></i><i style="--c:22;--r:0;--d:2.8s"></i><i class="q" style="--c:25;--r:7;--d:3.6s"></i><i style="--c:28;--r:3;--d:4.4s"></i><i style="--c:17;--r:8;--d:5.2s"></i><i class="q" style="--c:20;--r:4;--d:5.6s"></i><i style="--c:13;--r:3;--d:1s"></i><i style="--c:11;--r:7;--d:3s"></i><i class="q" style="--c:30;--r:5;--d:2.2s"></i></div>
+      <div class="aneis" aria-hidden="true"><span style="--d:260px;--i:0"></span><span style="--d:420px;--i:1"></span><span style="--d:580px;--i:2"></span><span style="--d:740px;--i:3"></span></div>
+      <div class="num-texto">
+        <h2 id="t-numeros">Um sistema completo, pronto para usar.</h2>
+        <p>Planejamento, carga, recuperação, avaliação física e relatórios, tudo interligado num arquivo de Excel que é seu.</p>
+        <a class="botao" href="#ferramentas">Ver as ferramentas <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+      </div>
+      <dl class="num-cards">
+        <div class="nc nc-a" style="--i:0"><dt><span data-contar="46">46</span></dt><dd>planilhas interligadas</dd></div>
+        <div class="nc nc-b" style="--i:1"><dt><span data-contar="16">16</span></dt><dd>modelos de relatório em PDF</dd></div>
+        <div class="nc nc-c" style="--i:2"><dt>1×</dt><dd>pagamento, sem mensalidade</dd></div>
+        <div class="nc nc-d" style="--i:3"><dt><span data-contar="7">7</span> dias</dt><dd>de garantia</dd></div>
+      </dl>
+    </div>
   </section>
 
   <!-- ================= VÍDEO ================= -->
@@ -235,7 +251,7 @@
   </section>
 
   <!-- ================= RELATÓRIOS ================= -->
-  <section class="bloco atm-feixes" id="relatorios">
+  <section class="bloco escuro" id="relatorios">
     <div class="miolo">
       <div class="cabeca cabeca-centro">
         <h2>Relatórios em PDF para a comissão e a diretoria.</h2>
@@ -295,11 +311,12 @@
   </section>
 
   <!-- ================= DIFERENCIAIS ================= -->
-  <section class="bloco atm-grade">
+  <section class="bloco atm-linhas">
     <div class="miolo diferenciais">
       <div class="dif-texto">
         <h2>A ferramenta é sua, não do clube.</h2>
         <p>Depender só da estrutura do clube limita o seu trabalho. Com o SoccerWork, o seu método, os seus dados e os seus relatórios vão com você para qualquer equipe.</p>
+        <a class="botao" href="#preco">Comprar por R$ 397 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
       </div>
       <ul class="dif-lista">
         <li class="vidro" data-luz>
@@ -327,53 +344,49 @@
   </section>
 
   <!-- ================= PREÇO ================= -->
-  <section class="bloco preco" id="preco">
-    <div class="preco-luz" aria-hidden="true"><span class="feixe f-e"></span><span class="feixe f-d"></span><span class="arco"></span></div>
+  <section class="bloco" id="preco">
+    <div class="piso-digital" aria-hidden="true"></div>
     <div class="miolo">
       <div class="cabeca cabeca-centro">
         <h2>Um pagamento. Acesso para sempre.</h2>
         <p>Depois da compra você recebe por e-mail o login para baixar o arquivo.</p>
       </div>
-
-      <div class="oferta">
-        <div class="oferta-card vidro">
-          <div class="oferta-topo">
-            <p class="oferta-nome">SoccerWork 5.0</p>
-            <p class="oferta-selo">Acesso vitalício</p>
-          </div>
-          <p class="oferta-valor"><span class="moeda">R$</span>397</p>
-          <p class="oferta-parcela">no PIX, ou 12x de R$ 44,88 no cartão</p>
+      <div class="planos">
+        <article class="plano">
+          <p class="plano-nome">No cartão</p>
+          <p class="plano-valor"><small>12x de</small>R$ 44,88</p>
+          <a class="botao botao-contorno" href="https://pay.kiwify.com.br/DZnyXJZ" rel="noopener">Parcelar no cartão <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+          <ul class="checks">
+            <li>Cartão de crédito em até 12x</li>
+            <li>Dá para dividir em dois cartões</li>
+            <li>Boleto também disponível</li>
+            <li>Acesso vitalício</li>
+          </ul>
+        </article>
+        <article class="plano plano-destaque">
+          <div class="plano-topo"><p class="plano-nome">No PIX</p><span class="plano-selo">Melhor preço</span></div>
+          <p class="plano-valor">R$ 397<small>à vista</small></p>
+          <a class="botao" href="pix.html">Pagar no PIX <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
           <ul class="checks">
             <li>46 planilhas interligadas</li>
             <li>16 modelos de relatório em PDF</li>
             <li>Atualizações futuras</li>
             <li>Suporte pelo WhatsApp</li>
-            <li>Funciona no Windows e no Mac, com Excel</li>
+            <li>Windows e Mac, com Excel</li>
           </ul>
-          <div class="oferta-acoes">
-            <a class="botao botao-laranja" href="pix.html">Pagar R$ 397 no PIX</a>
-            <a class="botao botao-s" href="https://pay.kiwify.com.br/DZnyXJZ" rel="noopener">Parcelar em 12x no cartão</a>
-          </div>
-          <p class="oferta-nota">Cartão e boleto pela Kiwify. Dá para dividir em dois cartões.</p>
-        </div>
-
-        <div class="garantias">
-          <div class="vidro" data-luz>
-            <p class="garantia-num">7</p>
-            <div>
-              <h3>dias de garantia</h3>
-              <p>Se o SoccerWork não servir para você, peça o reembolso em até 7 dias, como prevê o artigo 49 do Código de Defesa do Consumidor.</p>
-            </div>
-          </div>
-          <div class="vidro" data-luz>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19l1.3-3.9A8 8 0 1 1 8.9 18.7L4 19z"/><path d="M9 12l2 2 4-4"/></svg>
-            <div>
-              <h3>Suporte antes e depois da compra</h3>
-              <p>Ficou alguma dúvida? <a href="https://wa.me/555191736138" rel="noopener">Chame no WhatsApp</a>.</p>
-            </div>
-          </div>
-        </div>
+        </article>
+        <article class="plano">
+          <p class="plano-nome">Garantia</p>
+          <p class="plano-valor">7 dias</p>
+          <a class="botao botao-contorno" href="https://wa.me/555191736138" rel="noopener">Tirar dúvidas <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
+          <ul class="checks">
+            <li>Reembolso em até 7 dias, como prevê o art. 49 do CDC</li>
+            <li>Suporte antes e depois da compra</li>
+            <li>Você fala direto com quem desenvolveu</li>
+          </ul>
+        </article>
       </div>
+      <p class="oferta-nota">Cartão e boleto pela Kiwify. PIX direto para a Sttudio11.</p>
     </div>
   </section>
 
@@ -463,11 +476,11 @@
 
 </main>
 
-<footer class="rodape">
-  <div class="miolo">
+<footer class="rodape-claro">
+  <div class="rodape-cartao">
     <div class="rodape-topo">
       <img src="img/logo.webp" alt="SoccerWork" width="600" height="118" loading="lazy">
-      <a class="botao" href="#preco">Comprar por R$ 397</a>
+      <a class="botao" href="#preco">Comprar por R$ 397 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10.5 8.5 14 12l-3.5 3.5"/></svg></a>
     </div>
     <div class="rodape-cols">
       <div>
@@ -486,8 +499,9 @@
       </div>
     </div>
     <p class="rodape-base">© <span data-ano>2026</span> SoccerWork. Um produto Sttudio11.</p>
+  
+    <p class="rodape-marca" aria-hidden="true">SOCCERWORK</p>
   </div>
-  <p class="rodape-marca" aria-hidden="true">SOCCERWORK</p>
 </footer>
 
 <!-- visualizador de imagens -->
@@ -507,6 +521,6 @@
   <video controls playsinline preload="none"></video>
 </dialog>
 
-<script src="js/site.js?v=202609301930" defer></script>
+<script src="js/site.js?v=202609302340" defer></script>
 </body>
 </html>

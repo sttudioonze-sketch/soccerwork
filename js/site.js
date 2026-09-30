@@ -61,11 +61,14 @@ if (!reduzir && 'IntersectionObserver' in window) {
         el.textContent = Math.round(fim * (1 - Math.pow(1 - p, 3)));
         if (p < 1) requestAnimationFrame(passo);
       };
+      el.textContent = '0';
       requestAnimationFrame(passo);
+      // se a aba estiver em segundo plano o rAF para: garante o número final
+      setTimeout(() => { el.textContent = fim; }, 1600);
       obs.unobserve(el);
     });
   }, { threshold: .6 });
-  contadores.forEach((el) => { el.textContent = '0'; obs.observe(el); });
+  contadores.forEach((el) => obs.observe(el));
 }
 
 // ---------- carrosséis: setas e arrastar com o mouse ----------
