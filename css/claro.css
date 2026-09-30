@@ -229,10 +229,23 @@ button:hover > .play { scale: 1.07; }
   transform:
     perspective(1100px)
     translate3d(calc(var(--px, 0) * var(--prof, 1) * 22px), calc(var(--py, 0) * var(--prof, 1) * 14px), 0)
-    rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)) scale(var(--s, 1));
+    rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)) scale(calc(var(--s, 1) * var(--k, .82)));
   transition: transform .6s cubic-bezier(.2, .7, .2, 1);
 }
-.flut.longe { z-index: 1; filter: blur(1.3px); opacity: .8; }
+.flut.c-esq, .flut.longe { transform-origin: 0 50%; }
+.flut.c-dir, .flut.f-nome { transform-origin: 100% 50%; }
+.flut.longe { z-index: 1; filter: blur(1px); opacity: .85; }
+.flutuantes .vidro {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, .06) 50%, rgba(255, 255, 255, .12));
+  border: 1px solid rgba(255, 255, 255, .26);
+  -webkit-backdrop-filter: blur(24px) saturate(190%) brightness(1.08); backdrop-filter: blur(24px) saturate(190%) brightness(1.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), inset 0 -1px 0 rgba(255, 255, 255, .08), 0 24px 60px -24px rgba(0, 0, 0, .9);
+}
+.flutuantes .vidro::before { /* reflexo, atrás do texto */
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit;
+  background: linear-gradient(115deg, rgba(255, 255, 255, .22), transparent 38%, transparent 70%, rgba(255, 255, 255, .08));
+}
 .flut > .vidro { animation: flutua var(--dur, 7s) ease-in-out infinite; }
 @keyframes flutua { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
 .rotulo {
@@ -243,7 +256,7 @@ button:hover > .play { scale: 1.07; }
 }
 .rotulo li { display: flex; align-items: center; gap: 9px; }
 .rotulo svg { width: 19px; height: 19px; flex-shrink: 0; fill: none; stroke: var(--laranja-vivo); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.nome-tag { display: grid; gap: 2px; padding: 12px 20px 12px 16px; border-radius: 14px; box-shadow: inset 2px 0 0 var(--laranja-vivo), 0 24px 60px -24px rgba(0, 0, 0, .9) !important; }
+.nome-tag { display: grid; gap: 2px; padding: 12px 20px 12px 16px; border-radius: 14px; box-shadow: inset 2px 0 0 var(--laranja-vivo), inset 0 1px 0 rgba(255, 255, 255, .45), 0 24px 60px -24px rgba(0, 0, 0, .9) !important; }
 .nome-tag strong { font-family: var(--display); font-stretch: 75%; font-weight: 700; font-size: 1.1875rem; letter-spacing: .02em; text-transform: uppercase; line-height: 1.1; color: var(--branco); }
 .nome-tag span { font-size: .8125rem; color: var(--cinza-claro); }
 
@@ -693,7 +706,7 @@ dialog[open] { display: grid; place-items: center; }
   .hc-texto { margin-top: -56px; padding-bottom: 0; }
   .hc-texto .selo { background: rgba(0, 0, 0, .55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
   .aneis { top: 46%; }
-  .flut.longe { display: none; }
+  .flut.longe { --l: -6% !important; --t: 12% !important; }
   .flut.f-nome { --r: -8% !important; --t: 43% !important; }
   .flut.c-esq { --l: -8% !important; --t: 53% !important; }
   .flut.c-dir { --r: -8% !important; --t: 66% !important; }
@@ -722,7 +735,7 @@ dialog[open] { display: grid; place-items: center; }
   .acoes, .rodape-topo { justify-content: center; }
   .video-texto .checks { width: fit-content; margin-inline: auto; text-align: left; }
   .pessoa-foto { margin-inline: auto; }
-  .flut { --s: .72; }
+  .flut { --k: .62; }
   .flut.f-nome { --t: 41% !important; }
   .flut.c-esq { --t: 50% !important; }
   .flut.c-dir { --t: 58% !important; }
@@ -752,10 +765,8 @@ dialog[open] { display: grid; place-items: center; }
 }
 
 @media (max-width: 380px) {
-  .flut { --s: .64; }
-}
-@media (max-width: 340px) {
-  .flut.c-dir { display: none; }
+  .flut { --k: .56; }
+  .flut.c-dir { --t: 55% !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
