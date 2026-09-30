@@ -19,7 +19,7 @@ body { background: var(--branco); }
 #duvidas.atm-grade::before { display: none; }
 
 /* ---------- vidro claro ---------- */
-.vidro, .plano, .num-cartao, .barra-fixa, .fp-vis, .garantia {
+.vidro, .plano, .num-cartao, .barra-fixa, .garantia {
   background: var(--vidro-bg);
   border: 1px solid var(--vidro-borda);
   -webkit-backdrop-filter: var(--vidro-desfoque); backdrop-filter: var(--vidro-desfoque);
