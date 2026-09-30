@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Saira:wdth,wght@50..125,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/claro.css?v=202610011300">
+<link rel="stylesheet" href="css/claro.css?v=202610011415">
 <link rel="stylesheet" href="css/vidro.css?v=202610011300">
 </head>
 <body>
@@ -93,7 +93,7 @@
           <div class="flut longe" style="--l:-4%;--t:14%;--ry:14deg;--rx:5deg;--prof:.4;--s:.8;--e:1.1s;--dur:9s">
             <ul class="vidro rotulo"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Profissionalismo</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Desenvolvimento</li><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>Mentalidade</li></ul>
           </div>
-          <div class="flut" style="--r:-8%;--t:20%;--ry:-14deg;--rx:3deg;--prof:.7;--e:1s;--dur:8s">
+          <div class="flut f-nome" style="--r:-8%;--t:20%;--ry:-14deg;--rx:3deg;--prof:.7;--e:1s;--dur:8s">
             <div class="vidro nome-tag"><strong>Guilherme Rondon</strong><span>Preparador físico</span></div>
           </div>
           <div class="flut c-dir" style="--r:-12%;--t:68%;--ry:-18deg;--rx:-4deg;--prof:1.25;--e:1.2s;--dur:6.8s">
@@ -420,14 +420,17 @@
       </div>
 
       <div class="garantia">
-        <svg class="garantia-selo" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><linearGradient id="gs-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FDC830"/><stop offset="1" stop-color="#FF9920"/></linearGradient><path id="giro" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
-          <circle cx="100" cy="100" r="96" class="gs-borda"/>
-          <circle cx="100" cy="100" r="58" class="gs-miolo"/>
-          <text class="gs-giro"><textPath href="#giro" textLength="458">GARANTIA DE REEMBOLSO ✦ GARANTIA DE REEMBOLSO ✦</textPath></text>
-          <text class="gs-num" x="100" y="112" text-anchor="middle">7</text>
-          <text class="gs-dias" x="100" y="134" text-anchor="middle">DIAS</text>
-        </svg>
+        <!-- selo: anel de texto girando sobre um disco de vidro -->
+        <div class="garantia-marca" aria-hidden="true">
+          <span class="gs-luz"></span>
+          <div class="garantia-selo">
+            <svg class="gs-anel" viewBox="0 0 200 200">
+              <defs><path id="giro" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
+              <text class="gs-giro"><textPath href="#giro" textLength="470" lengthAdjust="spacing">GARANTIA DE REEMBOLSO ✦ GARANTIA DE REEMBOLSO ✦</textPath></text>
+            </svg>
+            <span class="gs-centro"><b>7</b>dias</span>
+          </div>
+        </div>
         <div class="garantia-texto">
           <h3>7 dias para testar</h3>
           <p>Se não servir para a sua rotina, você pede o reembolso integral em até 7 dias, como prevê o art. 49 do Código de Defesa do Consumidor. Antes e depois da compra, o suporte é com quem desenvolveu.</p>
