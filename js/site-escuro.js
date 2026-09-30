@@ -2,17 +2,17 @@
 
 const reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Vídeos ainda hospedados no Wix (provisório: migrar para YouTube não listado)
+// Vídeos hospedados junto com o site (baixados do Wix em 720p)
 const VIDEOS = {
-  demo: 'c41eef_53eeab8515db46dba06353b1ca8d83d4',
-  antonio: 'c41eef_e64cd2777ef04415ab0832e30cd77973',
-  eduardo: 'c41eef_b0a43e95b46e4d79b39a0d1f659eb450',
-  jose: 'c41eef_c9b4e51798214296abed505bedf0b8fc',
-  thiago: 'c41eef_e081fce4bfd540caae91ebb420c7053b',
-  mauro: 'c41eef_2e4a8bb2958c4e9ea9d099f6b1ab2310',
-  johnatan: 'c41eef_22e99ddb01464867993c597b71aefeaa',
+  demo: 'apresentacao',
+  antonio: 'antonio-junior',
+  eduardo: 'eduardo-oliveira',
+  jose: 'jose-lummertz',
+  thiago: 'thiago-ziemmer',
+  mauro: 'mauro-mazoni',
+  johnatan: 'johnatan-silva',
 };
-const urlVideo = (id) => `https://video.wixstatic.com/video/${id}/720p/mp4/file.mp4`;
+const urlVideo = (nome) => `videos/${nome}.mp4`;
 
 // ---------- topo ----------
 const topo = document.getElementById('topo');
